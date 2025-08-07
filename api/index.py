@@ -5,7 +5,7 @@ from app.agent import process_question_file
 app = FastAPI()
 
 @app.get("/")
-def home():
+def root():
     return {"message": "Vercel is working and FastAPI is live!"}
 
 @app.post("/api/")
