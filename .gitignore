@@ -1,0 +1,22 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+env/
+venv/
+
+# OS-specific
+.DS_Store
+
+# Data files
+*.sqlite3
+*.parquet
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VSCode
+.vscode/
