@@ -1,0 +1,10 @@
+# Ignore heavy stuff not needed by your API
+*.csv
+*.xlsx
+*.json
+*.ipynb
+*.zip
+data/
+models/
+tests/
+__pycache__/

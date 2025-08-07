@@ -1,15 +1,12 @@
-from fastapi import FastAPI, File, UploadFile
-from fastapi.responses import JSONResponse
-from app.agent import process_question_file
+from fastapi import FastAPI, UploadFile, File
+from app.agent import analyze_file  # Adjust import path if needed
 
 app = FastAPI()
 
 @app.get("/")
-def root():
-    return {"message": "Vercel is working and FastAPI is live!"}
+def read_root():
+    return {"message": "FastAPI app deployed on Vercel!"}
 
 @app.post("/api/")
-async def analyze(question_file: UploadFile = File(...), attachments: list[UploadFile] = File(default=[])):
-    content = await question_file.read()
-    answers = await process_question_file(content.decode(), attachments)
-    return JSONResponse(content=answers)
+async def analyze(uploaded_file: UploadFile = File(...)):
+    return analyze_file(uploaded_file)
