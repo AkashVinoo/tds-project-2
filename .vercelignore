@@ -1,21 +1,45 @@
-.venv
-__pycache__
+# Venv and Python cache
+.venv/
+__pycache__/
+*.pyc
+
+# Large file types
 *.zip
 *.tar.gz
+*.rar
 *.mp3
 *.jpg
 *.png
 *.jpeg
+*.webp
+*.mp4
+*.avi
 *.xlsx
 *.csv
+*.json
 *.jsonl
-*.webp
 *.gz
-*.ipynb
-tests/
-data/
-render.yaml
 *.log
 *.pdf
 *.md
 *.sql
+*.ipynb
+*.txt
+
+# VSCode, PyCharm, etc
+.vscode/
+.idea/
+*.code-workspace
+
+# Test files and scripts
+tests/
+test_*.py
+run_*.py
+debug_*.py
+final_*.py
+spider.py
+spider_results.json
+render_*
+data/
+models/
+tds_spider/
