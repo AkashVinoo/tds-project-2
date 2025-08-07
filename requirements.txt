@@ -6,3 +6,4 @@ pandas
 matplotlib
 duckdb
 numpy
+python-multipart
